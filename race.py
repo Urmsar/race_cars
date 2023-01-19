@@ -15,6 +15,7 @@ while race:
     place1 = place2 = 0
     length = random.randint(19, 20)
     race_nr += 1
+    # TODO: Good!
     answer = input(
         '\nChoose the option (type option number):\n'
         f'1 Start race {length}\n'
@@ -42,6 +43,8 @@ while race:
             place1 += speed1
             print()
             if place2 >= length:
+                # TODO: Don't repeat yourself.
+                #  Think of a way how can you avoid copying this if
                 print(f'Car {driver2} - {car2.color} win! ')
                 winner = car2.color
                 ending(race_nr, winner, length, time_start)
@@ -56,5 +59,7 @@ while race:
     elif answer == '3':
         race = False
         print('See you on the next race!')
+    # TODO: Redundant else.
+    #  Remove it and shift print() to the left by one indent
     else:
         print('no such option is offered')

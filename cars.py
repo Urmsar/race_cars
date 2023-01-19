@@ -23,6 +23,8 @@ def track(length, place, car):
         print('_', end='')
 
 
+# TODO: racenr is a confusing parameter name. Change to "race_number".
+#  Do not be afraid of using longer, descriptive names
 def ending(racenr, winner, length, time_start):
     time_finish = length * (datetime.now() - time_start)
     time_all = str(time_finish).split('.')[0]
