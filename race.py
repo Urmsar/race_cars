@@ -41,8 +41,8 @@ while race:
             print(*get_track(place[x], car[x], length))
         print()
         sleep(1.5)
+        time_start = datetime.now()
         while racetrack:
-            time_start = datetime.now()
             for x in range(number_of_cars):
                 speed[x] = random.randint(1, 2)
                 place[x] += speed[x]
